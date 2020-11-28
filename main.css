@@ -1,0 +1,153 @@
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #5D5D5D;
+}
+
+.navUp{
+    color: white;
+    background-color: #333333;
+}
+
+.blueFont {
+    color: #81D3F8 !important;
+}
+
+.navLogo {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.navA a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.navA a:visited {
+    color: white;
+}
+
+.navA a:hover {
+    opacity: 0.7;
+}
+
+.navB a{
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+}
+
+.navB a:last-child{
+    float: right;
+}
+
+.navB a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.navB a:visited {
+    color: white;
+}
+
+.navB a:hover {
+    color: #81D3F8;
+    opacity: 0.9;
+    
+}
+
+.footBottom {
+    background-color: #333333;
+    height: 170px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.footBottom p:first-child{
+    padding: 85px 0 0 0;
+}
+
+.socialIcon{
+    font-size: 2.5em;
+    padding: 50px 0 0 0;
+}
+
+.socialIcon a:hover{
+    opacity: 0.7;
+}
+
+.marginTopSub {
+    margin-top: 50px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    height: 60px;
+    width: 310px;
+    border: 1px solid #797979 ;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    margin: 30px 0 0 0;
+}
+
+input[type=submit] {
+    height: 40px;
+    width: 140px;
+    background-color: #169BD5;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    color: #FFFFFF;
+    font-size: 13px;
+}
+input[type=submit]:hover {
+    opacity: 0.7;
+}
+
+textarea{
+    border: 1px solid #797979 ;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    margin: 30px 0 0 0;
+}
+
+::-webkit-input-placeholder { 
+   color:#AAAAAA;
+   font-size: 18px;
+   padding: 0 0 0 20px;
+     }
+
+::-webkit-input-value {    
+    padding: 0 0 0 20px;
+   }
+
+.search[type=text] {
+    width: 50% !important;
+}
+
+.text {
+    color: #D7D7D7;
+}
+
+.list {
+    margin: 15px 0 15px 0;
+    text-align: left;
+}
+
+.listCheck {
+    color: #81D3F8 !important;
+}
+
+.list a:link{
+    text-decoration: none;
+    color: #D7D7D7;
+}
+
+.list a:visited {
+    color: #D7D7D7;
+}
+
+.list a:hover {
+    color: #81D3F8;
+    opacity: 0.8;
+}
