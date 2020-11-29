@@ -34,8 +34,59 @@
     </div>
 </nav>
 
-<main style="height: 1000px;">
+<main class="widthIndex" style="height: 1700px;">
+<div class="col-12 text-center text float-left spaceIndex">
+    <!-- skrypt wyswietlania spisu -->
+    <?php
+    # ustalenie numeru strony
+    require_once('Funkcje php/connect.php');
+    $page = isset( $_GET['page'] ) ? intval( $_GET['page'] ) : 1;
+    if( !empty ( $page ) ) filter_input( INPUT_GET , 'page' , FILTER_VALIDATE_INT );
+    else $page = 1;
 
+    # wysiwetlenie zawarotsci
+    $items_per_page = 2;
+    $offset = ($page -1)*$items_per_page;
+    $sql = "SELECT * FROM article ORDER BY `article`.`id_article` DESC LIMIT $offset ,$items_per_page";
+    foreach ($con->query($sql) as $row) {
+        echo "<div class='col-12 list'>";
+            echo "<a href='./openarticle.php?openPage=".$row['id_article']."'><img class='imgIndex' height='500px' src='img_article/".$row['image_article'].".png' ></a><br>";
+            echo "<h2><a href='./openarticle.php?openPage=".$row['id_article']."'>";
+            echo $row['title'];
+            echo "</h2></a>";
+        echo "</div>";
+        echo "<div class='col-12 list'>";
+            echo "<p>";
+            echo $row['date']." | ";
+            echo "<span class='blueAutor'>".$row['author'].'</span>';
+            echo "</p>";
+        echo "</div><br>";
+        
+    }
+    # okreslenie ilosci stron
+    $sql = "SELECT * FROM article";
+    $page_count = $con->query($sql);
+    $page_count = $page_count->num_rows;
+    $page_count = ceil($page_count/$items_per_page);
+    $con->close();
+    #wyswietlenie ilosci stron
+    echo "<div class='col-12 text-center list float-left'>";
+        $i = $page - 1;
+        if($page > 1 ) echo '<a href="./index.php?page='.$i.'">'.'<< '.'</a>';
+        if($page > 1 ) echo '<a href="./index.php?page=1">1</a> ...';
+        if($page > 1 ) echo '<a href="./index.php?page='.$i.'"> '.$i.'</a>';
+        echo '<a class="listCheck" href="./index.php?page='.$page.'"> '.$page.'</a>';
+        $i = $page + 1;
+        if($page != $page_count) echo '<a href="./index.php?page='.$i.'"> '.$i.'</a>';
+        echo ' ... <a href="./index.php?page='.$page_count.'"> '.$page_count.'</a>';
+        if($page_count > 1 && $page != $page_count ) echo '<a href="./index.php?page='.$i.'">'.' >>'.'</a>';
+
+    echo "</div>";
+    
+    ?>
+    
+</div>
+<!-- skrypt wyswietlania spisu -->
 </main>
 
 <footer class="footBottom col-12 " >

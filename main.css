@@ -151,3 +151,23 @@ textarea{
     color: #81D3F8;
     opacity: 0.8;
 }
+
+.spaceIndex 
+{
+    margin-top: 180px;
+    text-align: center;
+}
+
+.imgIndex
+{
+    margin:0 auto;
+    display:block;
+}
+
+.blueAutor {
+    color: #02A7F0;
+}
+
+.widthIndex {
+    padding: 0 5% 0 5%;
+}
