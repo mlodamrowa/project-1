@@ -34,6 +34,6 @@ Project is created with:
 * MySQL
 
 ## Project status
-* Project completed in 50%
+* Project completed in 70%
 
 
