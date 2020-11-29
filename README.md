@@ -18,9 +18,9 @@ In this you can read / add the content of articles, comment.
 * article adding system
 * Table of Contents
 * add article
+* edit article
 
 ### To-do list:
-* edit article
 * comment section
 * edit password / email (forgot password / email)
 * displaying articles on the website
