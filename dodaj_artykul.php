@@ -1,18 +1,10 @@
-<?php 
-session_start();
-if(isset($_SESSION['Logged']))
-{
-    if($_SESSION['permissions'] == 1)
-        {
-            header("Location: panel_administratora.php");
-            exit();
-        }
+<?php session_start(); 
+if(!isset($_SESSION['Logged']) && $_SESSION['permissions'] == 1){
+    header("location: index.php");
 }
-else 
-{
-    header("Location: zaloguj.php");
-} 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -21,8 +13,8 @@ else
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="login.css">
 <link rel="stylesheet" href="fontello/css/fontello.css">
+<link rel="stylesheet" href="login.css">
 <title>Forum.org</title>
 
 
@@ -37,11 +29,11 @@ else
     </div>
 
     <div class="col-8 navB">
-        <a href="index.php" >Strona Główna</a>
+        <a href="index.php">Strona Główna</a>
         <a href="spis_tresci.php" >Spis Treści</a>
         <a href="kontakt.php" >Kontakt</a>
         <a href="zaloguj.php" >
-            <svg class="bi bi-person-fill blueFont" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
             </svg>
         </a>
@@ -49,50 +41,29 @@ else
     </div>
 </nav>
 
-<main  style="height: 1000px;" >
+<main style="height: 1000px;">
 
-    <div class="col-6 spaceNav float-left ">
-        <div class="col-6 float-left" >
-            <img src="img/<?php echo $_SESSION['name_image']; ?>.png" alt="Image" width="75" height="75">
-            <p><b><?php echo $_SESSION['login']; ?></b></p>
-            <p><?php echo $_SESSION['email']; ?></p>
-        </div>
-        <div class="col-6 float-left text-left" >
+<div class="col-12 spaceNav">
 
-            <form action="change_icon.php" method="GET">
-                <input type="submit" value="Zmień ikone">
-            </form><br>
+    <form action="funkcje php/add_article.php" method="POST" enctype="multipart/form-data" action="plik.php">
+    <h2>Tytuł:</h2> <input type="text" name="title" id="" ><br><br>
+    <h2>Opis:</h2><textarea name="text" cols="100" rows="20"></textarea><br><br>
+    <h5>Dodaj zdjecie: <input type="file" name="file"><input type="submit" value="Dodaj"></h2>
+    <?php
+    if(isset($_SESSION['e_message']))
+        echo $_SESSION['e_message'];
+        unset($_SESSION['e_message']);
+    ?>
 
-            <form action="change_email.php" method="GET">
-                <input type="submit" value="Zmień email">
-            </form><br>
+    
 
-            <form action="change_password.php" method="GET">
-                <input type="submit" value="Zmień hasło">
-            </form><br>
+</div>
 
-            <form action="logout.php" method="GET">
-                <input type="submit" value="Wyloguj">
-            </form><br>
-        </div>
-        <span>
-        <?php
-            if(isset($_SESSION['e_message']))
-            {
-                echo $_SESSION['e_message'];
-                unset($_SESSION['e_message']);
-            }
-        ?>
-             </span>
-    </div>
-
-    <div class="col-6 spaceNav float-left">
-
-    </div>
+</form>
 
 </main>
 
-<footer class="footBottom col-12" >
+<footer class="footBottom col-12 " >
     <div class="col-2 float-left" style="color: #333333">.</div>
 
     <div class="col-8 float-left text-center">
@@ -110,12 +81,6 @@ else
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-
 </body>
 
 </html>
-
-<?php 
-
-
-?>
