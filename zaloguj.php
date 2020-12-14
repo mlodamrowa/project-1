@@ -59,14 +59,14 @@ require_once('Funkcje php/login.php');
      
         <h1>Zaloguj się</h1>
     
-        <form action="" method="post">
-            <input type="text" name="login" placeholder="Login" maxlength="30" required value="<?php if (isset($_POST['login'])) echo $_POST['login']; ?>"><br>
-            <input type="password" name="password" placeholder="Hasło" minlength="8" maxlength="12" required value=""><br>
+        <form action="" method="post" id="login">
+            <input class="login" type="text" name="login" placeholder="Login" maxlength="30" required value="<?php if (isset($_POST['login'])) echo $_POST['login']; ?>"><br>
+            <input class="login" type="password" name="password" placeholder="Hasło" minlength="8" maxlength="12" required value=""><br>
             <a href="#" style="font-size: 12px">Nie pamiętam hasła.</a><br>
-            <input class="marginTopSub" type="submit" value="Zaloguj">
+            <input class="marginTopSub login" type="submit" value="Zaloguj">
         </form>
         
-        <span class="message"><?php login();?></span>
+        <span class="message" id="check_login"><?php login();?></span>
 
     </div>
 
@@ -74,15 +74,15 @@ require_once('Funkcje php/login.php');
        
         <h1>Zarejestuj się</h1>
 
-        <form action="" method="post">
-            <input type="text" name="login2" placeholder="Login" maxlength="30" required value="<?php if (isset($_POST['login2'])) echo $_POST['login2']; ?>"><br>
-            <input type="password" id="pass1" name="password" placeholder="Hasło" minlength="8" maxlength="12" required><br>
-            <input type="password" id="pass2" name="repeatPassword" placeholder="Powtórz hasło" minlength="8" maxlength="12" required><br>
-            <input type="email" name="email" placeholder="E-mail" maxlength="60" required value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"><br>
-            <input class="marginTopSub"  type="submit" value="Zarejestruj">
+        <form action="" method="post" id="register">
+            <input class="register" type="text" name="login2" placeholder="Login" maxlength="30" required value="<?php if (isset($_POST['login2'])) echo $_POST['login2']; ?>"><br>
+            <input class="register" type="password" id="pass1" name="password" placeholder="Hasło" minlength="8" maxlength="12" required><br>
+            <input class="register" type="password" id="pass2" name="repeatPassword" placeholder="Powtórz hasło" minlength="8" maxlength="12" required><br>
+            <input class="register" type="email" name="email" placeholder="E-mail" maxlength="60" required value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"><br>
+            <input class="marginTopSub register"  type="submit" value="Zarejestruj">
         </form>
 
-        <span class="message"><?php register();?></span>
+        <span class="message" id="check_register" ><?php register();?></span>
 
     </div>
 
@@ -105,6 +105,7 @@ require_once('Funkcje php/login.php');
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="script\check.js"></script>
 
 
 </body>
