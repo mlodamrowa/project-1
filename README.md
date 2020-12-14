@@ -9,7 +9,7 @@
 
 ## General info
 This project is simple forum. 
-In this you can read / add the content of articles, comment.
+In this you can read / add the content of articles, comment. Link to a functioning website: http://testgit.cba.pl/. Username(admin) and password(admin123) for the admin panel.
 
 ## Features
 * login system
