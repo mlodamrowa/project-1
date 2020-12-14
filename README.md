@@ -22,7 +22,7 @@ In this you can read / add the content of articles, comment.
 
 ### To-do list:
 * comment section
-* edit password / email (forgot password / email)
+* edit password (forgot password)
 * displaying articles on the website
 
 ## Technologies
