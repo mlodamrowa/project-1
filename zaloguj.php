@@ -14,8 +14,8 @@ if(isset($_SESSION['Logged']))
         }
 }
 
-require_once('Funkcje php/register.php');
-require_once('Funkcje php/login.php');
+require_once('Funkcjephp/register.php');
+require_once('Funkcjephp/login.php');
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -53,7 +53,7 @@ require_once('Funkcje php/login.php');
     </div>
 </nav>
 
-<main  style="height: 1000px;" >
+<main  class="col-12" >
 
     <div class="col-6 spaceNav float-left">
      

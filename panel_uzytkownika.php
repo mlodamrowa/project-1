@@ -49,7 +49,7 @@ else
     </div>
 </nav>
 
-<main  style="height: 1000px;" >
+<main  class="col-12" >
 
     <div class="col-6 spaceNav float-left ">
         <div class="col-6 float-left" >

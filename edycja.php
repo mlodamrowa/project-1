@@ -4,7 +4,7 @@ if(!isset( $_SESSION['Logged'] ) && $_SESSION['permissions'] == 1){
 }
 if(empty( $_GET['edit'] )) header("location: index.php");
 $id_article = $_GET['edit'];
-require_once('Funkcje php\connect.php');
+require_once('Funkcjephp/connect.php');
 $sql = "SELECT * FROM article WHERE id_article = '$id_article'";
 $score = $con->query($sql)->fetch_assoc();
 $title = $score['title'];
@@ -50,11 +50,11 @@ $con->close();
     </div>
 </nav>
 
-<main style="height: 1000px;">
+<main class="col-12">
 
 <div class="col-12 spaceNav">
 
-    <form action="funkcje php/edit_article.php?edit=<?php echo $id_article; ?>" method="POST" enctype="multipart/form-data" action="plik.php">
+    <form action="Funkcjephp/edit_article.php?edit=<?php echo $id_article; ?>" method="POST" enctype="multipart/form-data" action="plik.php">
     <h2>Tytuł:</h2> <input type="text" name="title" id="" value="<?php echo $title; ?>"><br><br>
     <h2>Opis:</h2><textarea name="text" cols="100" rows="20"><?php echo $text; ?></textarea><br><br>
     <h5>Dodaj zdjecie: <input type="file" name="file"><input type="submit" value="Dodaj"></h2>

@@ -34,7 +34,7 @@
     </div>
 </nav>
 
-<main style="height: 1000px;">
+<main class="col-12">
 
 </main>
 

@@ -35,7 +35,7 @@
     </div>
 </nav>
 
-<main style="height: 1000px;">
+<main class="col-12">
 
 <div class="col-12 spaceNav">
 
@@ -50,7 +50,7 @@
     <!-- skrypt wyswietlania spisu -->
     <?php
     # ustalenie numeru strony
-    require_once('Funkcje php/connect.php');
+    require_once('Funkcjephp/connect.php');
     $page = isset( $_GET['page'] ) ? intval( $_GET['page'] ) : 1;
     if( !empty ( $page ) ) filter_input( INPUT_GET , 'page' , FILTER_VALIDATE_INT );
     else $page = 1;

@@ -50,7 +50,7 @@ else
     </div>
 </nav>
 
-<main  style="height: 1000px;" >
+<main  class="col-12" >
 
     <div class="col-6 spaceNav float-left ">
         <div class="col-6 float-left" >
@@ -60,7 +60,7 @@ else
         </div>
         <div class="col-6 float-left text-left" >
 
-            <form action="funkcje php/change_icon.php" method="POST" enctype="multipart/form-data">
+            <form action="Funkcjephp/change_icon.php" method="POST" enctype="multipart/form-data">
                 <input type="file" name="image"><br><br>
                 <input type="submit" value="Zmień ikone">
             </form><br>

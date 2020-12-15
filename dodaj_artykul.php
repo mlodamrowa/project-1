@@ -45,7 +45,7 @@ if(!isset($_SESSION['Logged']) && $_SESSION['permissions'] == 1){
 
 <div class="col-12 spaceNav">
 
-    <form action="funkcje php/add_article.php" method="POST" enctype="multipart/form-data" action="plik.php">
+    <form action="Funkcjephp/add_article.php" method="POST" enctype="multipart/form-data" action="plik.php">
     <h2>Tytuł:</h2> <input type="text" name="title" id="" ><br><br>
     <h2>Opis:</h2><textarea name="text" cols="100" rows="20"></textarea><br><br>
     <h5>Dodaj zdjecie: <input type="file" name="file"><input type="submit" value="Dodaj"></h2>
