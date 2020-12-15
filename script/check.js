@@ -10,13 +10,7 @@ function check_login()
     {
         error = error + "<br>Podaj hasło ";
     }
-    else
-    {
-        if(login[1].value.length < 8)
-        {
-            error = error + "<br>Hasło musi byc dluższe niż 7 znaków ";
-        }
-    }
+    
     if(error !== '')
     {   
         login[2].disabled = true;
@@ -91,6 +85,6 @@ function check_register()
 }
 var el1 = document.getElementById('login');
 var el2 = document.getElementById('register');
-el1.addEventListener('blur', check_login, true);
-el2.addEventListener('blur', check_register, true);
+el1.addEventListener('keyup', check_login, true);
+el2.addEventListener('keyup', check_register, true);
 
