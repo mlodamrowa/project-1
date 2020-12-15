@@ -67,6 +67,7 @@ function check_register()
                 {
                     error = error + "<br>Hasła nie są takie same";
                 }
+                else q = 2;
             }
         }
     }
@@ -86,9 +87,12 @@ function check_register()
         e.innerHTML = '<b>'+error+'</b>';
     }
     else 
-    {
-        register[4].disabled = false;
-        document.getElementById('check_register').innerHTML = '';
+    {   
+        if(q == 2)
+        {
+            register[4].disabled = false;
+            document.getElementById('check_register').innerHTML = '';
+        }
     }
 }
 var el1 = document.getElementById('login');
