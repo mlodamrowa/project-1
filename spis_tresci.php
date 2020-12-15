@@ -61,7 +61,7 @@
     $sql = "SELECT * FROM article ORDER BY `article`.`id_article` DESC LIMIT $offset ,$items_per_page";
     foreach ($con->query($sql) as $row) {
         echo "<div class='col-9 float-left list'>";
-            echo "<h2><a href='#'>";
+            echo "<h2><a href='./openarticle.php?openarticle=".$row['id_article']."'>";
             echo "<span class='blueFont'>".$row['id_article'] . ".</span> ";
             echo $row['title'];
             echo "</h2></a>";
