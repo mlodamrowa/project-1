@@ -18,7 +18,11 @@ function check_login()
         e.style.color = '#ff0000';
         e.innerHTML = '<b>'+error+'</b>';
     }
-    else login[2].disabled = false;
+    else 
+    {
+        login[2].disabled = false;
+        document.getElementById('check_login').innerHTML = '';
+    }    
 }
 function check_register()
 {
@@ -81,7 +85,11 @@ function check_register()
         e.style.color = '#ff0000';
         e.innerHTML = '<b>'+error+'</b>';
     }
-    else register[4].disabled = false;
+    else 
+    {
+        register[4].disabled = false;
+        document.getElementById('check_register').innerHTML = '';
+    }
 }
 var el1 = document.getElementById('login');
 var el2 = document.getElementById('register');
