@@ -19,11 +19,12 @@ In this you can read / add the content of articles, comment. Link to a functioni
 * Table of Contents
 * add article
 * edit article
+* displaying articles on the website
 
 ### To-do list:
 * comment section
 * edit password (forgot password)
-* displaying articles on the website
+
 
 ## Technologies
 Project is created with:
